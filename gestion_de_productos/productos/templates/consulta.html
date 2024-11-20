@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>Consulta</title>
+</head>
+
+<body>
+    <h1>
+        Listado de productos
+    </h1>
+    {% for producto in productos %}
+    <div>
+        <p>ID: {{ producto.id }}</p>
+        <p>Nombre: {{ producto.nombre }}</p>
+        <p>Precio: {{ producto.precio }}</p>
+    </div>
+    {% endfor %}
+</body>
+
+</html>
