@@ -11,6 +11,11 @@
 
 <body>
     <h1>Buscar Producto por ID</h1>
+
+    <div>
+        <a href="{% url 'index' %}">Volver a la lista de productos</a>
+    </div>
+
     <form method="post" action="{% url 'resultado' %}">
         {% csrf_token %}
         <label for="id">ID del Producto:</label>
@@ -25,8 +30,11 @@
         <p>Nombre: {{ producto.nombre }}</p>
         <p>Precio: {{ producto.precio }}</p>
     </div>
+
     {% elif error %}
-    <p>{{ error }}</p>
+    <div>
+        <p>{{ error }}</p>
+    </div>
     {% endif %}
 </body>
 

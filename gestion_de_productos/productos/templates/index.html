@@ -13,6 +13,12 @@
     <h1>
         Listado de productos
     </h1>
+    <div>
+        <a href="{% url 'registro' %}">Registrar nuevo producto</a>
+    </div>
+    <div>
+        <a href="{% url 'resultado' %}">Busca por ID</a>
+    </div>
     {% for producto in productos %}
     <div>
         <p>ID: {{ producto.id }}</p>
